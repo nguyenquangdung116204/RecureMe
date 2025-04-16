@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Tiêu đề và nút X -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đặt dịch vụ"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="X"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDescriptionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Mô tả"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Nhập mô tả phương tiện"
+            android:background="@drawable/edittext_border"
+            android:padding="10dp"
+            android:paddingBottom="20dp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- Số từ (0/1000) -->
+        <TextView
+            android:id="@+id/tvWordCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/1000"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/etDescription"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"/>
+    </RelativeLayout>
+    <!-- Phần tải hình ảnh và video -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- Chữ "Tải hình ảnh và video" -->
+        <TextView
+            android:id="@+id/tvAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tải hình ảnh và video"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- LinearLayout ngang chứa ImageView và nút Tải lên -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp">
+
+            <!-- ImageView để hiển thị hình ảnh hoặc thumbnail video -->
+            <ImageView
+                android:id="@+id/ivImagePlaceholder"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#E0E0E0"
+                android:scaleType="centerCrop"
+                android:contentDescription="Hình ảnh hoặc video đã tải"
+                android:layout_marginEnd="10dp"/>
+
+            <!-- Nút Tải lên -->
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tải lên"
+                android:textSize="14sp"
+                android:backgroundTint="#D3D3D3"
+                android:textColor="@android:color/black"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"/>
+        </LinearLayout>
+
+        <!-- Chữ "Không bắt buộc" -->
+        <TextView
+            android:id="@+id/tvOptional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Không bắt buộc"
+            android:textColor="#888888"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Nút Đặt dịch vụ -->
+    <Button
+        android:id="@+id/btnBookService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đặt dịch vụ"
+        android:backgroundTint="#D3D3D3"
+        android:textColor="@android:color/black"
+        android:padding="12dp"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+</LinearLayout>

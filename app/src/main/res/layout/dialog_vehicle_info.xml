@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập thông tin xe"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Trường nhập tên xe -->
+    <EditText
+        android:id="@+id/et_vehicle_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên xe (VD: Honda City)"
+        android:inputType="text"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Trường nhập năm sản xuất -->
+    <EditText
+        android:id="@+id/et_vehicle_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Năm sản xuất (VD: 2023)"
+        android:inputType="number"
+        android:layout_marginBottom="16dp" />
+
+    <!-- LinearLayout chứa hai nút "Quay lại" và "Xác nhận" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <!-- Nút Quay lại -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quay lại"
+            android:backgroundTint="#D3D3D3"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Nút Xác nhận -->
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:backgroundTint="#D3D3D3" />
+    </LinearLayout>
+
+</LinearLayout>
